@@ -1,0 +1,1 @@
+{"response":{"api":"ayushmanbhavah","version":"1","release_date":"2023-10-26","state_lgd":"7","dist_lgd":"85","update_date":"2023-10-26","SickleCell":[],"StatusCode":"404","message":"no record found"}}
