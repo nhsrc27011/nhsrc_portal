@@ -1,12 +1,12 @@
 pipeline {
          agent any
          environment{
-             staging_server:"103.139.58.136"
+             mukeshnhsrc58136:"103.139.58.136"
          }
          stages {
-            stage{'Deploy to remote'}
+            stage{'Deploy to remote'}{
                steps{
-                    sh 'scp -r ${WORKSPACE}/* root@${staging_server}:/var/www/html/'
+                    sh 'scp -r ${WORKSPACE}/* root@${mukeshnhsrc58136}:/var/www/html/'
                    }
               }
         }
