@@ -1,7 +1,8 @@
 pipeline {
          agent any
          environment {
-             staging_server:"103.139.58.136"
+             server_name:"mukeshnhsrc58136"
+             mukeshnhsrc58136:"103.139.58.136"
          }
          stages {
             stage {'Deploy to server'}{
