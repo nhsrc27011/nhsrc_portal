@@ -1,7 +1,7 @@
 pipeline {
          agent any
-         environment{
-             mukeshnhsrc58136:"103.139.58.136"
+         environment {
+             stagin_server:"103.139.58.136"
          }
          stages {
             stage{'Deploy to remote'}{
