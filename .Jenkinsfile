@@ -1,14 +1,11 @@
 pipeline {
-         agent any
-         environment {
-             server:"103.139.58.136"
-         }
-         stages {
-            stage {'Deploy to server'}{
-               steps{
-                    sh 'scp -r ${WORKSPACE}/* root@${mukeshnhsrc58136}:/var/www/html/nhsrc_portal'
-                   }
-              }
+    agent any
+
+    stages {
+        stage('Deploy PHP application') {
+            steps {
+                sshPublisher(publishers: [sshPublisherDesc(configName: '', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/var/www/html/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*.php')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+            }
         }
-   }
-                 
+    }
+}
